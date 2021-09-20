@@ -11,4 +11,8 @@ for ($i = 1; $i <= $n; $i ++) {
         echo "$j ";
     }
 }
+echo "\n";
+for($i = 0 ; $i< $n*$p ;$i++){
+    echo $i%$p." ";
+}
 ?>
