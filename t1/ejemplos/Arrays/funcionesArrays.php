@@ -21,5 +21,6 @@ echo in_array (10, $numeros)? "si" : "no";
 //     echo " ";
 // }
 // print_r($numeros);
+//unset (numeros[0]);
 
 ?>
