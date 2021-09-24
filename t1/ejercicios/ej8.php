@@ -7,7 +7,9 @@ echo "Dia: \n";
 fscanf(STDIN, "%d\n", $d);
 
 $fa = time();
-$fi = strtotime("$a-$m-$d");
+$faux = strtotime("1971-1-1");
+
+$fi = strtotime("$a-$m-$d") - $faux;//TODO
 $ds = $fa - $fi;
 
 $años = (int) ($ds / 31536000);
