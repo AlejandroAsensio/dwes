@@ -1,5 +1,5 @@
-<form>
-<input type="radio" id ="uno"name="numeros" value="1"/>
+<form action="ejInventServ1.php">
+<input type="radio" id ="uno"name="numeros" value="1" checked="checked"/>
 <label for="uno">1</label><br/>
 <input type="radio" id ="dos"name="numeros" value="2"/>
 <label for="dos">2</label><br/>
