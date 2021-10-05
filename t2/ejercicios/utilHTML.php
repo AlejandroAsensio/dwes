@@ -37,7 +37,7 @@ HTML;
 function pintarSelect($nombre,$arrayValueLabel,$multiple){
     $mult = ($multiple)? 'multiple="multiple"': '';
     $texto = '';
-    $texto .= "<select id='$nombre' $mult>";
+    $texto .= "<select id='$nombre' $mult>";//TODO
     foreach ($arrayValueLabel as $valor){
         
         $texto.=<<<HTML
