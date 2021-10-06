@@ -1,17 +1,18 @@
 <?php
-$nombre = isset($_COOKIE['nombre'])? $_COOKIE['nombre']:null;
-$contenido = isset($_COOKIE['contenido'])? $_COOKIE['contenido']:null;
-$nivel = isset($_COOKIE['nivel'])? $_COOKIE['nivel']:null;
+$nombre = isset($_GET['nombre'])? $_GET['nombre']:null;
+$contenido = isset($_GET['contenido'])? $_GET['contenido']:null;
+$nivel = isset($_GET['nivel'])? $_GET['nivel']:null;
 
 if($nombre!=null && $contenido != null && $nombre!=null){
+    $rutaBase = pathinfo($_SERVER['REQUEST_URI'])['dirname'];
     if($nivel==0){
-        setcookie($nombre,$contenido,'/');
+        setcookie($nombre,$contenido,0,$rutaBase.'/');
     }
     else if($nivel==1){
-        setcookie($nombre,$contenido,'/uno/');
+        setcookie($nombre,$contenido,0,$rutaBase.'/uno/');
     }
     else if($nivel==2){
-        setcookie($nombre,$contenido,'/uno/dos/');
+        setcookie($nombre,$contenido,0,$rutaBase.'/uno/dos/');
     }
 }
 else{

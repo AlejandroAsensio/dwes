@@ -1,9 +1,9 @@
 <h1>Listado de cookies por nivel</h1>
 Nivel 0 --> <a href="verCookies.php">Listado de cookies</a>
 <br/>
-Nivel 0 --> Nivel 1 --> <a href="/uno/verCookies.php">Listado de cookies</a>
+Nivel 0 --> Nivel 1 --> <a href="uno/verCookies.php">Listado de cookies</a>
 <br/>
-Nivel 0 --> Nivel 1 --> Nivel 2 --> <a href="/dos/verCookies.php">Listado de cookies</a>
+Nivel 0 --> Nivel 1 --> Nivel 2 --> <a href="uno/dos/verCookies.php">Listado de cookies</a>
 <br/>
 <h2>Creacion de cookies en diferentes niveles (directorios) por un script ubicado en /</h2>
 <h3>Se permite fijar nombre y contenido de la cookie, asi como el nivel</h3>
