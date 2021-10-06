@@ -15,4 +15,5 @@ else {
     setcookie('nVisita', $numVeces + 1);
     echo "<h1>Hola es la vez numero $numVeces que visitas esta pagina";
 }
+
 ?>
