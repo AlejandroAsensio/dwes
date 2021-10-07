@@ -30,4 +30,4 @@ else{
     
 }
 ?>
-<h1>Cookie<?= $nombre?></h1>
+<h1>Cookie <?= $nombre?></h1>
