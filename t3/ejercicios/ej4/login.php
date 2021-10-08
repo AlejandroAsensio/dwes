@@ -1,7 +1,7 @@
 <?php
-$user = isset($_REQUEST['usuario'])? $_REQUEST['usuario']: null;
-$nVisita = isset($_REQUEST['nVisita'])? $_REQUEST['nVisita']: null;
-$bandera = isset($_REQUEST['bandera'])? $_REQUEST['bandera']: null;
+$user = isset($_GET['usuario'])? $_GET['usuario']: null;
+$nVisita = isset($_GET['nVisita'])? $_GET['nVisita']: null;
+$bandera = isset($_GET['bandera'])? $_GET['bandera']: null;
 
 if($user==null && $nVisita ==null && $bandera==null){
     $texto =  "Primera vez";;
