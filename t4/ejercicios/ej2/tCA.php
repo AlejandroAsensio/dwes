@@ -91,20 +91,5 @@ $BDccaa = [
         'Rioja (La)'
     ]
 ];
-function pintarCA($nombres){
-    echo "<select name='pca' id='ccaa'>".PHP_EOL;
-    foreach ($nombres as $nombre){
-        echo "<option value='$nombre'>".$nombre."</option>".PHP_EOL;
-    }
-    echo "</select>";
-}
-
-// function pintarP($ca){
-//     echo "<select name='pv' id='pv'>".PHP_EOL;
-//     foreach ($ca as $pr){
-//         echo "<option value='$pr'>".$pr."</option>".PHP_EOL;
-//     }
-//     echo "</select>";
-// }
 
 ?>
