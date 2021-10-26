@@ -10,18 +10,9 @@ function insertarProductos($productos){
 insert into producto (nombre,precio)
 values ('$p[0]',$p[1])
 SQL;
-            
-            $bd->exec($sql);
-
-    
-        
-    
-
-        
-    
+    $bd->exec($sql);  
+    }
 }
-}
-
 
 insertarProductos([
     [
