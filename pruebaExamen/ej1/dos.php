@@ -35,11 +35,12 @@ $meses = [
 
 $inf = isset($_GET['inferior']) ? $_GET['inferior'] : 0;
 $sup = isset($_GET['superior']) ? $_GET['superior'] : 12;
-
+$check = '';
 for ($i = $inf-1; $i < $sup; $i ++) {
+    $check = ($i==$inf-1)? 'checked="checked"': '';
     echo <<<HTML
     <label for="$signos[$i]">$signos[$i]</label>
-    <input type="radio" name="signo" id="$signos[$i]" value="$signos[$i]"/><br/>
+    <input type="radio" name="signo" id="$signos[$i]" value="$signos[$i]" $check/><br/>
 HTML;
 }
 
