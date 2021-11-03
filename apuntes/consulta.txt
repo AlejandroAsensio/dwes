@@ -1,0 +1,10 @@
+cuantas personas viven en españa?
+
+select count(*)
+from persona
+where idPais in(select idPais from pais where nombre='es');
+
+
+select count(*) 
+from persona p, pais pa
+where p.idPais = pa.id and nombre='es';
