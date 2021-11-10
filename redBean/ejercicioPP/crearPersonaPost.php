@@ -16,9 +16,10 @@ if($nombre != null){
     conectar();
     $per = R::dispense('persona');
     $per->nombre = $nombre;
-    $p = R::dispense('pais');
-    $p = R::getCell("select id from pais where nombre = '$pais' ");//TODO
-    $per->pais=$p;
+    
+    $p = R::findOne('pais',"nombre=$pais");//TODO
+    $pp = R::load('pais',$p );
+    $per->pais=$pp;
     R::store($per);
     
     desconectar();
