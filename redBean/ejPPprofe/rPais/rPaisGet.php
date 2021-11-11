@@ -13,11 +13,17 @@ desconectar();
 <table border="1">
 	<tr>
 		<th>Nombre</th>
+		<th>Ciudadanos</th>
 	</tr>
 	<?php foreach($paises  as $pais):?>
 	
 		<tr>
 			<td><?= $pais->nombre?>
+			</td>
+			<td>
+				<?php foreach ($pais->ownPersonaList as $persona):?>
+					<?=$persona->nombre ?>
+				<?php endforeach;?>
 			</td>
 		</tr>
 		

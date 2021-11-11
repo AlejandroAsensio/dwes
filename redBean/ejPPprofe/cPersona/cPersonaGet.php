@@ -2,6 +2,8 @@
 require_once '../bd/bdh.php';
 conectar();
 $paises = R::findAll('pais');
+$aficiones = R::findAll('aficion');
+desconectar();
 ?>
 <h1>Nueva Persona</h1>
 <form action="cPersonaPost.php" method="post">
@@ -18,6 +20,15 @@ $paises = R::findAll('pais');
     		</option>
     <?php endforeach;?>
     </select>
+    <fieldset>
+    <legend>Aficiones</legend>
+    	<?php foreach ($aficiones as $aficion):?>
     
+    		<input type="checkbox" id="id-<?= $aficion->id ?>" name="idAficiones[]" value="<?= $aficion->id ?>"/>
+    		<label for="id-<?= $aficion->id ?>"><?= $aficion->nombre ?></label>
+    		
+    	<?php endforeach;?>
+    </fieldset>
+    <br/>
     <input type="submit" value="Crear"/>
 </form>

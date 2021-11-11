@@ -8,12 +8,13 @@ desconectar();
 <h1>Lista de personas</h1>
 
 <form action="../cPersona/cPersonaGet.php">
-	<input type="submit" value="Nuevo país"/>
+	<input type="submit" value="Nueva persona"/>
 </form>
 <table border="1">
 	<tr>
 		<th>Nombre</th>
 		<th>Pais de nacimiento</th>
+		<th>Aficiones</th>
 	</tr>
 	<?php foreach($personas  as $persona):?>
 	
@@ -23,6 +24,11 @@ desconectar();
 			</td>
 			<td>
 				<?= $persona->pais->nombre?>
+			</td>
+			<td>
+				<?php foreach($persona->sharedAficionList as $aficion):?>
+					<?=$aficion->nombre ?>
+				<?php endforeach;?>
 			</td>
 		</tr>
 		
