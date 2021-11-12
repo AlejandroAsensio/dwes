@@ -33,14 +33,25 @@ desconectar();
     
     
     <fieldset>
-    <legend>Aficiones</legend>
+    <legend>Aficiones que me gustan</legend>
     	<?php foreach ($aficiones as $aficion):?>
     
-    		<input type="checkbox" id="id-<?= $aficion->id ?>" name="idAficiones[]" value="<?= $aficion->id ?>"/>
-    		<label for="id-<?= $aficion->id ?>"><?= $aficion->nombre ?></label>
+    		<input type="checkbox" id="idg-<?= $aficion->id ?>" name="idAficionesGusta[]" value="<?= $aficion->id ?>"/>
+    		<label for="idg-<?= $aficion->id ?>"><?= $aficion->nombre ?></label>
     		
     	<?php endforeach;?>
     </fieldset>
+    
+    <fieldset>
+    <legend>Aficiones que aborrezco</legend>
+    	<?php foreach ($aficiones as $aficion):?>
+    
+    		<input type="checkbox" id="ido-<?= $aficion->id ?>" name="idAficionesOdio[]" value="<?= $aficion->id ?>"/>
+    		<label for="ido-<?= $aficion->id ?>"><?= $aficion->nombre ?></label>
+    		
+    	<?php endforeach;?>
+    </fieldset>
+    
     <br/>
     <input type="submit" value="Crear"/>
 </form>

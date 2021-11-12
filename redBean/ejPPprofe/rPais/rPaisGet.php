@@ -37,3 +37,7 @@ desconectar();
 		
 	<?php endforeach;?>
 </table>
+<br/>
+<form action="../home/home.php">
+<input type="submit" value="Volver"/>
+</form>
