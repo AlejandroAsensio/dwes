@@ -1,14 +1,15 @@
 <?php
 require_once '../bd/bdh.php';
 $nombre = isset($_POST['nombre'])? $_POST['nombre'] : 'John Doe';
-$idPais = isset($_POST['idPais'])? $_POST['idPais'] : null;
+$idPaisN = isset($_POST['idPaisN'])? $_POST['idPaisN'] : null;
+$idPaisV = isset($_POST['idPaisV'])? $_POST['idPaisV'] : null;
 $idAficiones = isset($_POST['idAficiones'])? $_POST['idAficiones'] : [];
 
 conectar();
 $persona = R::dispense('persona');
 $persona->nombre = $nombre;
-$persona->pais = R::load('pais',$idPais);
-
+$persona->nace = R::load('pais',$idPaisN);
+$persona->vive = R::load('pais', $idPaisV);
 foreach ($idAficiones as $idAficion){
    $persona->sharedAficionList[] = R::load('aficion',$idAficion);
 }

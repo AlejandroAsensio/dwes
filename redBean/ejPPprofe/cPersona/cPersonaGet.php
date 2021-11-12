@@ -11,8 +11,8 @@ desconectar();
     <input type="text" id="nP" name="nombre" required="required"/>
     <br/><br/>
     
-    País
-    <select name="idPais">
+    País nacimiento
+    <select name="idPaisN">
     <?php foreach ($paises as $pais):?>
     	<option value="<?= $pais->id?>">
     		<?= $pais->nombre ?>
@@ -20,6 +20,18 @@ desconectar();
     		</option>
     <?php endforeach;?>
     </select>
+    
+     País Residencia
+    <select name="idPaisV">
+    <?php foreach ($paises as $pais):?>
+    	<option value="<?= $pais->id?>">
+    		<?= $pais->nombre ?>
+    		
+    		</option>
+    <?php endforeach;?>
+    </select>
+    
+    
     <fieldset>
     <legend>Aficiones</legend>
     	<?php foreach ($aficiones as $aficion):?>

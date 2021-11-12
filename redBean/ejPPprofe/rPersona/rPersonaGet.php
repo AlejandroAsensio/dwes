@@ -14,6 +14,7 @@ desconectar();
 	<tr>
 		<th>Nombre</th>
 		<th>Pais de nacimiento</th>
+		<th>Pais de residencia</th>
 		<th>Aficiones</th>
 	</tr>
 	<?php foreach($personas  as $persona):?>
@@ -22,9 +23,15 @@ desconectar();
 			<td>
 				<?= $persona->nombre?>
 			</td>
+			
 			<td>
-				<?= $persona->pais->nombre?>
+				<?= $persona->fetchAs('pais')->nace->nombre?>
 			</td>
+			
+			<td>
+				<?= $persona->fetchAs('pais')->vive->nombre?>
+			</td>
+			
 			<td>
 				<?php foreach($persona->sharedAficionList as $aficion):?>
 					<?=$aficion->nombre ?>
