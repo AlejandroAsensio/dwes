@@ -9,9 +9,7 @@ $idAficionesOdio = isset($_POST['idAficionesOdio'])? $_POST['idAficionesOdio'] :
 conectar();
 $persona = R::dispense('persona');
 $persona->nombre = $nombre;
-if($idPaisN!= 'ninguno'){
 $persona->nace = R::load('pais',$idPaisN);
-}
 $persona->vive = R::load('pais', $idPaisV);
 // foreach ($idAficiones as $idAficion){
 //    $persona->sharedAficionList[] = R::load('aficion',$idAficion);

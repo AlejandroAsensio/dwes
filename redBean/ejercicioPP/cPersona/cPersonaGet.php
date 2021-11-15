@@ -13,8 +13,6 @@ desconectar();
     
     País nacimiento
     <select name="idPaisN">
-    <option value="ninguno">--Ninguno--</option>
-    
     <?php foreach ($paises as $pais):?>
     	<option value="<?= $pais->id?>">
     		<?= $pais->nombre ?>

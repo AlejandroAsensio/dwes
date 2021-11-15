@@ -26,7 +26,7 @@ desconectar();
 			</td>
 			
 			<td>
-				<?= $persona->nace_id!=null?$persona->fetchAs('pais')->nace->nombre:"-ninguno-"?>
+				<?= $persona->fetchAs('pais')->nace->nombre?>
 			</td>
 			
 			<td>
