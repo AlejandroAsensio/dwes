@@ -1,9 +1,11 @@
-<h1>Lista de links</h1>
+<?= titulo('Lista de links')?>
+
 <ul>
 <?php foreach($links as $etiqueta=>$url):?>
 
 	<li>
-		<a href="<?= $url?>"><?=$etiqueta?></a>
+		<?= anchor($url,$etiqueta)?>
+		
 	</li>
 <?php endforeach;?>
 </ul>
