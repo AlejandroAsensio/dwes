@@ -1,6 +1,14 @@
 <?php
 class Ejercicios_model extends CI_Model{
+    private function adaptar($beans){
+        $datos = [];
+        foreach($beans as $bean){
+            $datos[$bean->label] = $bean->uri;
+        }
+        return $datos;
+    }
     public function getLinks(){
+        /*
         $datos = [
             
                 'BING' => 'http://www.bing.com',
@@ -9,7 +17,14 @@ class Ejercicios_model extends CI_Model{
                 'FACEBOOK' => 'http://www.facebook.com',
                 'TWITTER' => 'http://www.twitter.com'            
         ];
-        return $datos;
+        */
+        
+        
+        
+       
+        return $this->adaptar(R::findAll('enlaces'));
+        
+        
     }
 }
 ?>
