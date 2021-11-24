@@ -1,4 +1,4 @@
-<?php
+    <?php
 class Pais extends CI_Controller{
     function r(){
         $this->load->model('Pais_model');
