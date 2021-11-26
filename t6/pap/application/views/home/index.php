@@ -1,16 +1,32 @@
 <div class="container jumbotron">
-	<h1>P.A.P. Alejandro Asensio</h1>
 	
-	<a href="<?= base_url()?>pais/r">Paises</a>
 	
+	<div class="row">
+	<form action="<?= base_url()?>pais/r">
+    	<button>
+    		Paises
+    		<img src="<?=base_url()?>assets/img/banderas.jpg" height="100" width="200"/>
+    	</button>
+	</form>
 	<br/>
 	
-    <a href="<?= base_url()?>aficion/r">Aficiones</a>
+   <form action="<?= base_url()?>aficion/r">
+    	<button>
+    		Aficiones
+    		<img src="<?=base_url()?>assets/img/aficiones.jpg" height="100" width="200"/>
+    	</button>
+	</form>
     
     <br/>
     
-    <a href="<?= base_url()?>persona/r">Personas</a>
+    <form action="<?= base_url()?>persona/r">
+    	<button>
+    		Personas
+    		<img src="<?=base_url()?>assets/img/personas.jpg" height="100" width="200"/>
+    	</button>
+	</form>
     
     <br/>
+    </div>
 	
 </div>

@@ -19,15 +19,16 @@ class Pais_model extends CI_Model{
     }
     
     function u($idPais, $nombre){
-        $pais = R::findOne('pais','nombre=?',[$nombre]);
+        $paisNuevo = R::findOne('pais','nombre=?',[$nombre]);
+        $pais = R::load('pais',$idPais);
         
-        if($pais==null){
-            $pais = R::load('pais',$idPais);
+        if($paisNuevo ==null || strtolower($nombre) == strtolower($pais->nombre)){
+           
             $pais->nombre = $nombre;
             R::store($pais);
         }
         else{
-            throw new Exception("El pais {$pais->nombre} ya existe");
+            throw new Exception("El pais {$paisNuevo->nombre} ya existe");
         }
         
     }
@@ -35,7 +36,17 @@ class Pais_model extends CI_Model{
     function getPaisById($id){
         return R::load('pais',$id);
     }
-    
+    function d($idPais){
+        if($idPais != null){
+            $pais = R::load('pais', $idPais);
+            if($pais->id==0){
+                throw new Exception("El pais id={$idPais} no existe");
+            }
+            R::trash($pais);
+    }
+    }
+
+
 }
 
 ?>

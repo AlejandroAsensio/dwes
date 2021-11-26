@@ -33,6 +33,7 @@ class Pais extends CI_Controller{
         $data['pais'] = $this->Pais_model->getPaisById($idPais);
         frame($this,'pais/u',$data);
     }
+    
     function uPost(){
         $nombre = isset($_POST['nombre'])? $_POST['nombre'] : 'ninguno';
         $idPais = isset($_POST['idPais'])? $_POST['idPais'] : null;
@@ -46,6 +47,26 @@ class Pais extends CI_Controller{
             errorMsg($e->getMessage(),'pais/r');
         }
     }
+    
+    function d(){
+        $idPais = isset($_GET['idPais'])?$_GET['idPais']:null;
+        $this->load->model('Pais_model');
+        $data['pais'] = $this->Pais_model->getPaisById($idPais);
+        frame($this,'pais/d',$data);
     }
+    
+    function dPost(){
+        $idPais= isset($_POST['idPais'])?$_POST['idPais']:null;
+        $this->load->model('Pais_model');
+        try{
+            $this->Pais_model->d($idPais);
+            redirect(base_url().'pais/r');
+        }
+        catch(Exception $e){
+            errorMsg($e->getMessage(),'pais/r');
+        }
+    }
+}
+    
 
 ?>
